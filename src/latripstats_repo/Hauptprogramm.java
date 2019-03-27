@@ -1,6 +1,6 @@
 package latripstats_repo;
 
-public class Test {
+public class Hauptprogramm {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
