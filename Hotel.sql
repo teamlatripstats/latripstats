@@ -1,8 +1,14 @@
---CREATE DATABASE Hotel
+Drop Database hotel_db
+
+go
+CREATE DATABASE hotel_db
+go
+
+use hotel_db
 
 CREATE TABLE eigenschaften (
 	
-	HID int IDENTITY(1, 1) PRIMARY KEY,	--Identity: Automatischer Wert der sich um 1 erhöht
+	HID int IDENTITY(1, 1) PRIMARY KEY,	--Identity: Automatischer Wert der sich um 1 erhÃ¶ht
 	Kategorie varchar (5) NOT NULL,
 	Name varchar (max) NOT NULL,
 	Adresse varchar (max) NOT NULL,
@@ -12,7 +18,12 @@ CREATE TABLE eigenschaften (
 	Telefon int,
 	Kontakt varchar (max),
 	Raumzahl int NOT NULL,
-	Bettenzahl int NOT NULL
+	Bettenzahl int NOT NULL,
+	Familienfreundlich varchar (10),
+	Hundefreundlich varchar (10),
+	Spa varchar (10),
+	Fitness varchar (10)
+
 )
 
 CREATE TABLE belegung (
@@ -28,10 +39,10 @@ CREATE TABLE belegung (
 )
 
 Insert into eigenschaften VALUES 
-	('*', 'Beim Branntweiner', 'Weinberg 3', 'A-1234', 'Alkohütten', 'Ima Voll', 546456, 'Gretel', 1, 1),
-	('**', 'Das ABC', 'Heinzelmännchenweg 3', 'A-BCDEF', 'Buchstaben', 'II.Literat', 9876, 'der böse Wolf', 2, 2),
-	('****', 'Drei Sterne und die Sonne', 'Sterngasse 5', 'A-1234', 'Alldorf', 'Sternwarte', 01234, 'Hänsel', 40, 4),
-	('*****', 'Zum güldenen Hirsch', 'Hirschgasse 42/47/11', 'A-0815', 'Hirschhausen', 'Harry Hirsch', 1234, 'Susi', 5, 50),
-	('***', 'Zum wilden Eber', 'Am Berg 7', 'A-007', 'Großebersdorf', 'James Bond', 0987, 'Strolchi', 3, 3)
+	('*', 'Beim Branntweiner', 'Weinberg 3', 'A-1234', 'AlkohÃ¼tten', 'Ima Voll', 546456, 'Gretel', 1, 1,'Ja','Ja','Nein','Nein'),
+	('**', 'Das ABC', 'HeinzelmÃ¤nnchenweg 3', 'A-BCDEF', 'Buchstaben', 'II.Literat', 9876, 'der bÃ¶se Wolf', 2, 2,'Ja','Ja','Nein','Nein'),
+	('****', 'Drei Sterne und die Sonne', 'Sterngasse 5', 'A-1234', 'Alldorf', 'Sternwarte', 01234, 'HÃ¤nsel', 40, 4,'Ja','Ja','Nein','Nein'),
+	('*****', 'Zum gÃ¼ldenen Hirsch', 'Hirschgasse 42/47/11', 'A-0815', 'Hirschhausen', 'Harry Hirsch', 1234, 'Susi', 5, 50,'Ja','Ja','Nein','Nein'),
+	('***', 'Zum wilden Eber', 'Am Berg 7', 'A-007', 'GroÃŸebersdorf', 'James Bond', 0987, 'Strolchi', 3, 3,'Ja','Ja','Nein','Nein')
 
-SELECT * FROM eigenschaften
+SELECT * FROM eigenschaften 
