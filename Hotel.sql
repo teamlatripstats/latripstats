@@ -1,3 +1,4 @@
+Use master
 Drop Database hotel_db
 
 go
@@ -28,8 +29,7 @@ CREATE TABLE eigenschaften (
 
 CREATE TABLE belegung (
 	BID int IDENTITY (1,1) PRIMARY KEY,
-	Monat date,
-	Jahr date,
+	Datum date not null,
 	Kategorie varchar (5) NOT NULL,
 	Zimmer int,
 	Zimmerauslastung int,
