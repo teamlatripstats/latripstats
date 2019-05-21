@@ -1,2 +1,1 @@
 # latripstats
-Skrr skrr
